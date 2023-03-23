@@ -32,29 +32,29 @@ class Tee(object):
     def flush(self):
         self.file.flush()
 
-class LinearWeightNorm(torch.nn.Module):
-    def __init__(self, in_features, out_features, bias=True, weight_scale=None, weight_init_stdv=0.1):
-        super(LinearWeightNorm, self).__init__()
-        self.in_features = in_features
-        self.out_features = out_features
-        self.weight = utils.Parameter(torch.randn(out_features, in_features) * weight_init_stdv)
-        if bias:
-            self.bias = utils.Parameter(torch.zeros(out_features))
-        else:
-            self.register_parameter('bias', None)
-        if weight_scale is not None:
-            assert type(weight_scale) == int
-            self.weight_scale = utils.Parameter(torch.ones(out_features, 1) * weight_scale)
-        else:
-            self.weight_scale = 1 
-    def forward(self, x):
-        W = self.weight * self.weight_scale / torch.sqrt(torch.sum(self.weight ** 2, dim = 1, keepdim = True))
-        return F.linear(x, W, self.bias)
-    def __repr__(self):
-        return self.__class__.__name__ + '(' \
-            + 'in_features=' + str(self.in_features) \
-            + ', out_features=' + str(self.out_features) \
-            + ', weight_scale=' + str(self.weight_scale) + ')'
+# class LinearWeightNorm(torch.nn.Module):
+#     def __init__(self, in_features, out_features, bias=True, weight_scale=None, weight_init_stdv=0.1):
+#         super(LinearWeightNorm, self).__init__()
+#         self.in_features = in_features
+#         self.out_features = out_features
+#         self.weight = utils.Parameter(torch.randn(out_features, in_features) * weight_init_stdv)
+#         if bias:
+#             self.bias = utils.Parameter(torch.zeros(out_features))
+#         else:
+#             self.register_parameter('bias', None)
+#         if weight_scale is not None:
+#             assert type(weight_scale) == int
+#             self.weight_scale = utils.Parameter(torch.ones(out_features, 1) * weight_scale)
+#         else:
+#             self.weight_scale = 1 
+#     def forward(self, x):
+#         W = self.weight * self.weight_scale / torch.sqrt(torch.sum(self.weight ** 2, dim = 1, keepdim = True))
+#         return F.linear(x, W, self.bias)
+#     def __repr__(self):
+#         return self.__class__.__name__ + '(' \
+#             + 'in_features=' + str(self.in_features) \
+#             + ', out_features=' + str(self.out_features) \
+#             + ', weight_scale=' + str(self.weight_scale) + ')'
 
 def weights_init(m):
     if isinstance(m, model.MyConvo2d): 
