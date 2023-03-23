@@ -37,7 +37,7 @@ Note that in this repo, we provide training code for training classifiers of KED
 
 ## 4. Training GAN (Optional)
 
-SOTA MI attacks work with a general GAN, therefore. However, Inversion-Specific GANs help improve the attack accuracy. In this repo, we provide codes for both training general GAN and Inversion-Specific GAN.
+SOTA MI attacks work with a general GAN[1]. However, Inversion-Specific GANs[2] help improve the attack accuracy. In this repo, we provide codes for both training general GAN and Inversion-Specific GAN.
 
 ### 4.1. Build a inversion-specific GAN 
 * Modify the configuration in
@@ -106,4 +106,4 @@ python evaluation.py --configs path/to/config.json
 Zhang, Yuheng, et al. "The secret revealer: Generative model-inversion attacks against deep neural networks." Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2020.
 
 
-<a id="2">[1]</a>  Si Chen, Mostafa Kahla, Ruoxi Jia, and Guo-Jun Qi. Knowledge-enriched distributional model inversion attacks. In Proceedings of the IEEE/CVF international conference on computer vision, pages 16178–16187, 2021
+<a id="2">[2]</a>  Si Chen, Mostafa Kahla, Ruoxi Jia, and Guo-Jun Qi. Knowledge-enriched distributional model inversion attacks. In Proceedings of the IEEE/CVF international conference on computer vision, pages 16178–16187, 2021
