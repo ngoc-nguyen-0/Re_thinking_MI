@@ -26,7 +26,7 @@ pip install -r requirements.txt
 * Extract and place the two folders at `.\datasets` and `.\checkpoints`
   
 
-## 3. Training the target classifier (Optional)
+### 2.1. Training the target classifier (Optional)
 
 - Modify the configuration in `.\config\celeba\classify.json`
 - Then, run the following command line to get the target model
@@ -35,11 +35,11 @@ pip install -r requirements.txt
   ```
 Note that in this repo, we provide training code for training classifiers of KEDMI/GMI experiments on CelebA dataset. Other checkpoints for the three models (i.e., VGG16, IR152, Facenet can be downloaded at https://drive.google.com/drive/folders/1U4gekn72UX_n1pHdm9GQUQwwYVDvpTfN)
 
-## 4. Training GAN (Optional)
+### 2.2. Training GAN (Optional)
 
 SOTA MI attacks work with a general GAN[1]. However, Inversion-Specific GANs[2] help improve the attack accuracy. In this repo, we provide codes for both training general GAN and Inversion-Specific GAN.
 
-### 4.1. Build a inversion-specific GAN 
+#### 2.2.1. Build a inversion-specific GAN 
 * Modify the configuration in
   * `./config/celeba/training_GAN/specific_gan/celeba.json` if training a Inversion-Specific GAN on CelebA
   * `./config/celeba/training_GAN/specific_gan/ffhq.json` if training a Inversion-Specific GAN on FFHQ
@@ -49,7 +49,7 @@ SOTA MI attacks work with a general GAN[1]. However, Inversion-Specific GANs[2] 
     python train_gan.py --configs path/to/config.json --mode "specific"
     ```
 
-### 4.2. Build a general GAN 
+#### 2.2.2. Build a general GAN 
 * Modify the configuration in
   * `./config/celeba/training_GAN/general_gan/celeba.json` if training a Inversion-Specific GAN on CelebA
   * `./config/celeba/training_GAN/general_gan/ffhq.json` if training a Inversion-Specific GAN on FFHQ
@@ -62,7 +62,7 @@ SOTA MI attacks work with a general GAN[1]. However, Inversion-Specific GANs[2] 
 Pretrained general GAN and Inversion-Specific GAN can be downloaded at https://drive.google.com/drive/folders/1L3frX-CE4j36pe5vVWuy3SgKGS9kkA70
 
 
-## 5. Learn augmented models
+## 3. Learn augmented models
 We provide code to train augmented models (i.e., `efficientnet_b0`, `efficientnet_b1`, and `efficientnet_b3`) from a ***target model***.
 * Modify the configuration in
   * `./config/celeba/training_augmodel/celeba.json` if training an augmented model on CelebA
@@ -76,7 +76,7 @@ We provide code to train augmented models (i.e., `efficientnet_b0`, `efficientne
 Pretrained augmented models can be downloaded at https://drive.google.com/drive/folders/12Ib5N9jRkApaVFrUu33S4nexlJwZuCoJ?usp=share_link
 
 
-## 6. Model Inversion Attack
+## 4. Model Inversion Attack
 
 * Modify the configuration in
   * `./config/celeba/attacking/celeba.json` if training an augmented model on CelebA
@@ -91,7 +91,7 @@ Pretrained augmented models can be downloaded at https://drive.google.com/drive/
     python recovery.py --configs path/to/config.json
     ```
 
-## 7. Evaluation
+## 5. Evaluation
 
 After attack, use the same configuration file to run the following command line to get the result:\
 ```
