@@ -20,6 +20,9 @@ pip install -r requirements.txt
 
 - FFHQ: download and extract the [FFHQ](https://github.com/NVlabs/ffhq-dataset). Then, place the `thumbnails128x128` folder to `.\datasets\ffhq`
 
+* Download meta data for the experiments at: https://drive.google.com/drive/folders/1kq4ArFiPmCWYKY7iiV0WxxUSXtP70bFQ?usp=sharing
+
+
 * We use the same target models and GAN as previous papers. You can download target models and generator at https://drive.google.com/drive/folders/1U4gekn72UX_n1pHdm9GQUQwwYVDvpTfN and https://drive.google.com/drive/folders/1L3frX-CE4j36pe5vVWuy3SgKGS9kkA70. Place the checkpoints at `.\checkpoints`
 
 Otherwise, you can train the target classifier and GAN as follow:
