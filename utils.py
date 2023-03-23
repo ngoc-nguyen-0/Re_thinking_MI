@@ -79,13 +79,8 @@ def init_dataloader(args, file_path, batch_size=64, mode="gan", iterator=False):
     else:
         shuffle_flag = True
 
-    # if args['dataset']['name'] == "celeba" or :
-    #     data_set = dataloader.ImageFolder(args, file_path, mode)
-
-    if args['dataset']['name'] == 'mnist' or  args['dataset']['name'] == 'xray':
-        data_set = dataloader.GrayFolder(args, file_path, mode)
-    else:
-        data_set = dataloader.ImageFolder(args, file_path, mode)
+  
+    data_set = dataloader.ImageFolder(args, file_path, mode)
 
     if iterator:
         data_loader = torch.utils.data.DataLoader(data_set,
