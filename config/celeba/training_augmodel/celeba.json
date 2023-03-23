@@ -1,5 +1,5 @@
 {
-    "root_path": "./checkpoints/student_ckp/",
+    "root_path": "./checkpoints/aug_ckp/",
     "dataset":{
         "gan_file_path": "./datasets/celeba/meta/ganset.txt",
         "test_file_path": "./datasets/celeba/meta/testset.txt",
@@ -14,8 +14,8 @@
     "train":{
         "epochs": 20,
         "target_model_name": "VGG16", 
-        "target_model_ckpt": "./checkpoints/download/target_model/target_ckp/VGG16_88.26.tar",
-        "student_model_name": "efficientnet_b2",
+        "target_model_ckpt": "./checkpoints/target_model/target_ckp/VGG16_88.26.tar",
+        "student_model_name": "efficientnet_b0",
         "device": "cuda",
         "lr": 0.01,
         "temperature": 1.0,
