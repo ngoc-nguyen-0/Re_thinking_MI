@@ -71,8 +71,8 @@ We provide code to train augmented models (i.e., `efficientnet_b0`, `efficientne
     python train_gan.py --configs path/to/config.json
     ```
 
-Pretrained augmented models can be downloaded at https://drive.google.com/drive/folders/12Ib5N9jRkApaVFrUu33S4nexlJwZuCoJ?usp=share_link
-
+Pretrained augmented models can be downloaded at https://drive.google.com/drive/u/2/folders/1kq4ArFiPmCWYKY7iiV0WxxUSXtP70bFQ
+Note that if you train augmented models, please delete p_reg in `./p_reg/` 
 
 ## 4. Model Inversion Attack
 
