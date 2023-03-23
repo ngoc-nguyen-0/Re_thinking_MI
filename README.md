@@ -26,7 +26,7 @@ pip install -r requirements.txt
 * Extract and place the two folders at `.\datasets` and `.\checkpoints`
   
 
-## 3. Training the target classifier (Optinal)
+## 3. Training the target classifier (Optional)
 
 - Modify the configuration in `.\config\celeba\classify.json`
 - Then, run the following command line to get the target model
@@ -35,7 +35,7 @@ pip install -r requirements.txt
   ```
 Note that in this repo, we provide training code for training classifiers of KEDMI/GMI experiments on CelebA dataset. Other checkpoints for the three models (i.e., VGG16, IR152, Facenet can be downloaded at https://drive.google.com/drive/folders/1U4gekn72UX_n1pHdm9GQUQwwYVDvpTfN)
 
-## 4. Training GAN (Optinal)
+## 4. Training GAN (Optional)
 
 SOTA MI attacks work with a general GAN, therefore. However, Inversion-Specific GANs help improve the attack accuracy. In this repo, we provide codes for both training general GAN and Inversion-Specific GAN.
 
