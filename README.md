@@ -66,9 +66,9 @@ We provide code to train augmented models (i.e., `efficientnet_b0`, `efficientne
   * `./config/celeba/training_augmodel/celeba.json` if training an augmented model on CelebA
   * `./config/celeba/training_augmodel/ffhq.json` if training an augmented model on FFHQ
   
-* Then, run the following command line to get the General GAN
+* Then, run the following command line to train augmented models
     ```
-    python train_gan.py --configs path/to/config.json
+    python train_augmented_model.py --configs path/to/config.json
     ```
 
 Pretrained augmented models can be downloaded at https://drive.google.com/drive/u/2/folders/1kq4ArFiPmCWYKY7iiV0WxxUSXtP70bFQ
