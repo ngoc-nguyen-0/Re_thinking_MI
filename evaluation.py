@@ -69,13 +69,7 @@ if __name__ == '__main__':
             aver_acc, aver_acc5, aver_std, aver_std5 = eval_accuracy(G=G, E=E, save_dir=save_dir, args=args)
         elif metric_ == 'knn':
             knn = eval_KNN(G=G, E=E, save_dir=save_dir, KNN_real_path=cfg["dataset"]["KNN_real_path"], args=args)
-        elif metric_ == 'eval_acc_class':
-            eval_acc_class(G=G, E=E, save_dir=save_dir, prefix=prefix, args=args)
-        # elif metric_ == 'eval_prob_class':
-        #     from eval_accuracy import eval_prob
-        #     eval_prob(args)
-        #     exit()
- 
+       
     csv_file = os.path.join(prefix, 'Eval_results.csv') 
     if not os.path.exists(csv_file):
         header = ['Save_dir', 'Method', 'Succesful_samples',                    
@@ -92,8 +86,8 @@ if __name__ == '__main__':
             '{:.2f}'.format(aver_std),
             '{:.2f}'.format(aver_acc5),
             '{:.2f}'.format(aver_std5),
-            '{:.2f}'.format(knn),
-            '{:.2f}'.format(fid)]
+            '{:.2f}'.format(fid),
+            '{:.2f}'.format(knn)]
     
     print("---------------Evaluation---------------")
     print('Method: {} '.format(cfg["attack"]["method"]))
