@@ -15,15 +15,14 @@ pip install -r requirements.txt
 
 ## 2. Prepare Dataset & Checkpoints
 
-<!-- - CelebA: download and extract the [CelebA](https://www.kaggle.com/datasets/jessicali9530/celeba-dataset?resource=download-directory). Then, place the `img_align_celeba` folder to `.\datasets\celeba`
-
-- FFHQ: download and extract the [FFHQ](https://www.kaggle.com/datasets/greatgamedota/ffhq-face-data-set). Then, place the `thumbnails128x128` folder to `.\datasets\ffhq` -->
-
-* Download target models and generator at https://drive.google.com/drive/folders/1U4gekn72UX_n1pHdm9GQUQwwYVDvpTfN and https://drive.google.com/drive/folders/1L3frX-CE4j36pe5vVWuy3SgKGS9kkA70
-
 * Dowload CelebA and FFHQ dataset at the official website.
- 
-* Extract and place the two folders at `.\datasets` and `.\checkpoints`
+- CelebA: download and extract the [CelebA](https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html). Then, place the `img_align_celeba` folder to `.\datasets\celeba`
+
+- FFHQ: download and extract the [FFHQ](https://github.com/NVlabs/ffhq-dataset). Then, place the `thumbnails128x128` folder to `.\datasets\ffhq`
+
+* We use the same target models and GAN as previous papers. You can download target models and generator at https://drive.google.com/drive/folders/1U4gekn72UX_n1pHdm9GQUQwwYVDvpTfN and https://drive.google.com/drive/folders/1L3frX-CE4j36pe5vVWuy3SgKGS9kkA70. Place the checkpoints at `.\checkpoints`
+
+Otherwise, you can train the target classifier and GAN as follow:
   
 
 ### 2.1. Training the target classifier (Optional)
@@ -33,7 +32,6 @@ pip install -r requirements.txt
   ```
   python train_classifier.py
   ```
-Note that in this repo, we provide training code for training classifiers of KEDMI/GMI experiments on CelebA dataset. Other checkpoints for the three models (i.e., VGG16, IR152, Facenet can be downloaded at https://drive.google.com/drive/folders/1U4gekn72UX_n1pHdm9GQUQwwYVDvpTfN)
 
 ### 2.2. Training GAN (Optional)
 
@@ -58,9 +56,6 @@ SOTA MI attacks work with a general GAN[1]. However, Inversion-Specific GANs[2] 
     ```
     python train_gan.py --configs path/to/config.json --mode "general"
     ```
-
-Pretrained general GAN and Inversion-Specific GAN can be downloaded at https://drive.google.com/drive/folders/1L3frX-CE4j36pe5vVWuy3SgKGS9kkA70
-
 
 ## 3. Learn augmented models
 We provide code to train augmented models (i.e., `efficientnet_b0`, `efficientnet_b1`, and `efficientnet_b3`) from a ***target model***.
