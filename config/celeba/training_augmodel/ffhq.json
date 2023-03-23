@@ -12,7 +12,7 @@
     },
 
     "train":{
-        "epochs": 30,
+        "epochs": 20,
         "target_model_name": "VGG16", 
         "target_model_ckpt": "./checkpoints/download/target_model/target_ckp/VGG16_88.26.tar",
         "student_model_name": "efficientnet_b0",
