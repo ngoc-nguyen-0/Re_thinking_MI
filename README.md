@@ -19,7 +19,8 @@ pip install -r requirements.txt
 
 - FFHQ: download and extract the [FFHQ](https://www.kaggle.com/datasets/greatgamedota/ffhq-face-data-set). Then, place the `thumbnails128x128` folder to `.\datasets\ffhq` -->
 
-* Download `datasets.zip` and `checkpoints.zip` from https://drive.google.com/drive/folders/1aab4DJKX7g_-IGWBpgo98EWi-fQuGPT0?usp=share_link
+* Down load target models and generator at https://drive.google.com/drive/folders/1U4gekn72UX_n1pHdm9GQUQwwYVDvpTfN and https://drive.google.com/drive/folders/1L3frX-CE4j36pe5vVWuy3SgKGS9kkA70
+
 * Extract and place the two folders at `.\datasets` and `.\checkpoints`
   
 
