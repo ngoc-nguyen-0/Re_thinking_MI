@@ -1,4 +1,4 @@
-# Implementation of paper Re-thinking Model Inversion Attacks Against Deep Neural Networks - CVPR 2023
+# Implementation of paper "Re-thinking Model Inversion Attacks Against Deep Neural Networks" - CVPR 2023
 
 ## 1. Setup Environment
 This code has been tested with Python 3.7, PyTorch 1.11.0 and Cuda 11.3. 
