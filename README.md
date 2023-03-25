@@ -1,5 +1,5 @@
 # Implementation of paper "Re-thinking Model Inversion Attacks Against Deep Neural Networks" - CVPR 2023
-
+Paper | [Project page](https://ngoc-nguyen-0.github.io/re-thinking_model_inversion_attacks/)
 ## 1. Setup Environment
 This code has been tested with Python 3.7, PyTorch 1.11.0 and Cuda 11.3. 
 
