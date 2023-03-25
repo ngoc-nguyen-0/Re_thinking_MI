@@ -72,7 +72,8 @@ We provide code to train augmented models (i.e., `efficientnet_b0`, `efficientne
     ```
 
 Pretrained augmented models can be downloaded at https://drive.google.com/drive/u/2/folders/1kq4ArFiPmCWYKY7iiV0WxxUSXtP70bFQ
-Note that if you train augmented models, please delete p_reg in `./p_reg/` 
+
+***We remark that if you train augmented models, please delete p_reg in `./p_reg/` ***
 
 ## 4. Model Inversion Attack
 
