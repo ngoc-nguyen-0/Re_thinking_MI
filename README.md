@@ -42,8 +42,8 @@ SOTA MI attacks work with a general GAN[1]. However, Inversion-Specific GANs[2] 
 
 #### 2.2.1. Build a inversion-specific GAN 
 * Modify the configuration in
-  * `./config/celeba/training_GAN/specific_gan/celeba.json` if training a Inversion-Specific GAN on CelebA
-  * `./config/celeba/training_GAN/specific_gan/ffhq.json` if training a Inversion-Specific GAN on FFHQ
+  * `./config/celeba/training_GAN/specific_gan/celeba.json` if training a Inversion-Specific GAN on CelebA (KEDMI[2]).
+  * `./config/celeba/training_GAN/specific_gan/ffhq.json` if training a Inversion-Specific GAN on FFHQ (KEDMI[2]).
   
 * Then, run the following command line to get the Inversion-Specific GAN
     ```
@@ -52,8 +52,8 @@ SOTA MI attacks work with a general GAN[1]. However, Inversion-Specific GANs[2] 
 
 #### 2.2.2. Build a general GAN 
 * Modify the configuration in
-  * `./config/celeba/training_GAN/general_gan/celeba.json` if training a Inversion-Specific GAN on CelebA
-  * `./config/celeba/training_GAN/general_gan/ffhq.json` if training a Inversion-Specific GAN on FFHQ
+  * `./config/celeba/training_GAN/general_gan/celeba.json` if training a general GAN on CelebA (GMI[1]).
+  * `./config/celeba/training_GAN/general_gan/ffhq.json` if training a general GAN on FFHQ (GMI[1]).
   
 * Then, run the following command line to get the General GAN
     ```
