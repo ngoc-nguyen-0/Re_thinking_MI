@@ -71,7 +71,7 @@ We provide code to train augmented models (i.e., `efficientnet_b0`, `efficientne
     python train_augmented_model.py --configs path/to/config.json
     ```
 
-Pretrained augmented models can be downloaded at https://drive.google.com/drive/u/2/folders/1kq4ArFiPmCWYKY7iiV0WxxUSXtP70bFQ
+Pretrained augmented models and p_reg can be downloaded at https://drive.google.com/drive/u/2/folders/1kq4ArFiPmCWYKY7iiV0WxxUSXtP70bFQ
 
 ***We remark that if you train augmented models, please do not use our p_reg***. Please delete files in in `./p_reg/`. Our code will automatically estimate p_reg will new augmented models.
 
